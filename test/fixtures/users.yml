@@ -1,0 +1,5 @@
+
+one:
+  email: myname@examples.com
+  encrypted_password: <%= BCrypt::Password.create('vrauu')%>
+  remember_token: <%= Clearance::Token.new %>

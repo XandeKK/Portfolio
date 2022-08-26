@@ -1,0 +1,17 @@
+<div>
+  <% if signed_in?%>
+    <div class="flex flex-row-reverse m-10">
+      <%= button_to "Destroy", project_path(@project), method: :delete, class: "focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" %>
+      <%= link_to "Edit", edit_project_path(@project), class: "focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" %>
+    </div>
+  <% end %>
+  <h1 class="font-bold text-4xl text-center my-10 text-white"><%= @project.name %></h1>
+
+  <%= render partial: "carousel" %>
+
+  <div class="my-28 text-white md:w-9/12 m-auto text-lg">
+    <%= @project.body.html_safe %>
+  </div>
+</div>
+
+<p class="text-green-400"></p>

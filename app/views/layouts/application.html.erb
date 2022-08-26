@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="dark:bg-gray-800">
+    <%= render partial: "shared/navbar" %>
+    <main class="md:px-4 px-2 w-full">
+      <%= yield %>
+    </main>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+  </body>
+</html>
